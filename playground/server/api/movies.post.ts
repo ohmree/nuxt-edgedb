@@ -8,13 +8,11 @@ export default defineEventHandler(async event => {
   const actorsQuery = e.for(e.json_array_unpack(e.json(actors)), actor =>
     e.insert(e.Person, { name: e.cast(e.str, actor.name) }),
   );
-  console.log(actorsQuery.toEdgeQL());
   const query = e.insert(e.Movie, {
     title,
     release_year,
     actors: actorsQuery,
   });
-  console.log(query.toEdgeQL());
   const result = await query.run(edgedb);
   return result;
 });

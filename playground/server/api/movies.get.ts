@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import e from 'edgeql-js';
 import { useEdgeDB } from 'nuxt-edgedb';
 
