@@ -1,0 +1,7 @@
+dist
+node_modules
+pnpm-lock.yaml
+.nuxt
+dbschema/edgeql-js
+dbschema/migrations
+dbschema/interfaces.ts
